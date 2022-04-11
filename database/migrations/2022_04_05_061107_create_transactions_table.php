@@ -16,7 +16,7 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('customer_id');
-            $table->float('total_price');
+            $table->float('total_price', 15, 2);
             $table->softDeletes();
             $table->timestamps();
         });

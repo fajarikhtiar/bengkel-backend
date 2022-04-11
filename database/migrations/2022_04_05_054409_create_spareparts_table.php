@@ -16,7 +16,7 @@ class CreateSparepartsTable extends Migration
         Schema::create('spareparts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->float('price');
+            $table->float('price', 15, 2);
             $table->softDeletes();
             $table->timestamps();
         });
